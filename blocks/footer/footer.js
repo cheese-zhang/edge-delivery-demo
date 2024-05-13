@@ -21,6 +21,7 @@ export default async function decorate(block) {
   block.textContent = '';
   const footer = document.createElement('section');
   footer.className = 'footer';
+  // eslint-disable-next-line camelcase
   const footer_inner = buildElementWithClassName('div', 'footer_inner ui-pagewidthlimit');
   const footer_inner_content = '<ul> <li><a href="#cookies" class="footer_link"><i class="fa fa-info-circle"></i><span>Cookies</span></a></li> <li><a href="#" class="footer_link"><i class="fa fa-lock"></i><span>Privacy</span></a></li> <li><a href="#" class="footer_link"><i class="fa fa-envelope"></i><span>Contact</span></a></li> </ul>';
   footer_inner.innerHTML = footer_inner_content;
@@ -30,9 +31,9 @@ export default async function decorate(block) {
 
   // all picture gets
   // while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-  const logos = [volvofinance,mackfinance];
-  [...logos].forEach((logo,index) => {
-    logo.style.backgroundImage = 'url(' + fragment.querySelectorAll('picture')[index].querySelector('img').src + ')';
+  const logos = [volvofinance, mackfinance];
+  [...logos].forEach((logo, index) => {
+    logo.style.backgroundImage = `url(${fragment.querySelectorAll('picture')[index].querySelector('img').src})`;
     footer_logos.append(logo);
   });
 
