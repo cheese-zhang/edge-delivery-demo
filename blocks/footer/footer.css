@@ -1,14 +1,252 @@
-footer {
-  padding: 2rem;
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+.footer {
+  background-color: #fff;
+  padding: 48px 0
 }
 
-footer .footer {
-  max-width: 1200px;
+@media screen and (max-width: 720px) {
+  .footer {
+    padding:34px 0
+  }
+}
+
+.footer_inner {
+  display: flex;
+  align-items: center
+}
+
+.footer_link {
+  color: #fefefe;
+  text-decoration: none
+}
+
+.footer_link:hover {
+  color: #000
+}
+
+.footer_link:hover i {
+  color: #000
+}
+
+.footer_link:hover>i {
+  top: 0
+}
+
+.footer_link:hover>i+span {
+  opacity: 1;
+  color: #474747
+}
+
+.footer_link span {
+  font-size: .85em;
+  margin-top: 1.85em;
+  display: block;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity .5s linear
+}
+
+.footer_logos {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  align-items: center
+}
+
+.footer_logo {
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 4em;
+  flex: 0 1 7em;
+  margin: 1em
+}
+
+.footer ul {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-start
+}
+
+.footer li {
+  color: #fefefe;
+  display: flex;
+  text-align: center;
+  flex: 0 1 auto;
+  justify-content: center
+}
+
+.footer .fab,.footer .fal,.footer .far,.footer .fa {
+  font-size: 2.5em;
+  display: block;
+  color: #000;
+  position: relative;
+  transition: top .2s linear;
+  top: 22px;
+  width: 2em
+}
+
+.footer .fab.fa-lock,.footer .fal.fa-lock,.footer .far.fa-lock,.footer .fa.fa-lock {
+  font-size: 2.2em
+}
+
+@media(max-width: 45em) {
+  .footer_logos {
+    justify-content:center;
+    flex-wrap: wrap
+  }
+
+  .footer_logos .footer_logo {
+    max-width: 232px;
+    width: 50%;
+    flex: none
+  }
+
+  .footer_inner {
+    justify-content: center
+  }
+
+  .footer_inner ul {
+    display: none
+  }
+}
+
+.footer-external {
+  background-color: #fff;
+  padding: 3em 0
+}
+
+.footer-external_inner {
+  display: flex;
+  align-items: center
+}
+
+.footer-external_link {
+  color: #fefefe;
+  text-decoration: none
+}
+
+.footer-external_link:hover {
+  color: #000
+}
+
+.footer-external ul {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-start
+}
+
+.footer-external li {
+  color: #fefefe;
+  display: flex;
+  text-align: center;
+  flex: 0 1 auto;
+  justify-content: center
+}
+
+@media(max-width: 45em) {
+  .footer-external_inner {
+    justify-content:center
+  }
+
+  .footer-external_inner ul {
+    display: none
+  }
+}
+
+.footer-rmi-timr {
+  background-color: #fff;
+  padding: 3em 0
+}
+
+.footer-rmi-timr_inner {
+  display: flex;
+  align-items: center
+}
+
+.footer-rmi-timr_link {
+  color: #fefefe;
+  text-decoration: none
+}
+
+.footer-rmi-timr_link:hover {
+  color: #000
+}
+
+.footer-rmi-timr ul {
+  flex: 1 0 auto;
+  display: flex;
   margin: auto;
+  justify-content: center
 }
 
-footer .footer p {
-  margin: 0;
+.footer-rmi-timr li {
+  color: #fefefe;
+  display: flex;
+  text-align: center;
+  flex: 0 1 auto;
+  justify-content: center;
+  border-right: 1px solid #fff!important;
+  padding: 0 1em;
+  font-size: .875em
+}
+
+.footer-rmi-timr li:last-of-type {
+  border-right: none!important
+}
+
+@media(max-width: 45em) {
+  .footer-rmi-timr_inner {
+    justify-content:center
+  }
+
+  .footer-rmi-timr_inner ul {
+    display: none
+  }
+}
+
+.footer div.footer_logo.eicher {
+}
+
+.footer div.footer_logo.supplier {
+}
+
+.footer div.footer_logo.volvofinance {
+  flex: unset;
+  width: 217px
+}
+
+@media screen and (max-width: 850px) {
+  .footer div.footer_logo.volvofinance {
+    width:152px;
+    margin-left: 36px
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer div.footer_logo.volvofinance {
+    width:190px;
+    margin: 30px
+  }
+}
+
+.footer div.footer_logo.mackfinance {
+  height: 80px;
+  width: 160px;
+  flex: 0 0 auto
+}
+
+@media screen and (max-width: 850px) {
+  .footer div.footer_logo.mackfinance {
+    height:56px;
+    margin-left: 16px
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer div.footer_logo.mackfinance {
+    height:70px;
+    margin: 30px
+  }
 }

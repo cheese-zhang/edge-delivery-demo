@@ -20,14 +20,16 @@
 .siteHead_inner h1 {
     flex: 0 0 auto
 }
-
+.siteHead_fixbar {
+    max-width: 85em;
+}
 .siteHead_fixbar {
     max-width: 58.75em;
     margin: auto;
     position: fixed;
     top: 0;
     left: 0;
-    right: -95em;
+    right: 0;
     z-index: 10000;
     width: 100%
 }
@@ -454,14 +456,9 @@
     }
 }
 
-.backGroud-pic picture {
-    position: absolute;
-    inset: 0;
-    object-fit: cover;
-    box-sizing: border-box;
-    text-align: right;
+.siteHead_fixbar {
+    max-width: 85em;
 }
-
 
 [dir="ltr"] .siteHead_linklist {
     right: 11.5em;

@@ -1,7 +1,7 @@
 /* vfs style */
 .ui-pagewidthlimit {
-    max-width: 58.75rem;
-    margin: auto
+    max-width: 85rem;
+    margin: auto;
 }
 
 @media (width <= 45em) {
@@ -206,4 +206,7 @@ ol li {
     margin-left: 2em;
     list-style-type: decimal;
     padding: .625em .625em .625em 0
+}
+main {
+    margin-top: 2em;
 }

@@ -1,3 +1,4 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
 
 function buildElementWithClassName(eleName, className) {
   const element = document.createElement(eleName);
@@ -21,6 +22,8 @@ export default function decorate(block) {
     swiperSlide.append(img);
     swiperWrapper.append(swiperSlide);
   });
+  swiperWrapper.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+
   swiperContainer.append(swiperWrapper);
   block.append(swiperContainer);
   block.append(buildElementWithClassName('div','hero-pagination'));

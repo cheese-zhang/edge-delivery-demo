@@ -26,7 +26,6 @@ function headerContainerFun(title, location) {
 function siteHeadLinklistFun() {
   const siteHeadLinklist = document.createElement('div');
   siteHeadLinklist.className = 'siteHead_linklist';
-
   const siteHeadUserprofilebuttoncontainer = document.createElement('div');
   siteHeadUserprofilebuttoncontainer.className = 'siteHead_userprofilebuttoncontainer';
 
@@ -86,26 +85,17 @@ export default function decorate(block) {
     title = textDiv.children[0].textContent;
     location = textDiv.children[1].textContent;
     // eslint-disable-next-line prefer-destructuring
-    backGroudPic = textDiv.children[2];
-    backGroudPic.className = 'backGroud-pic';
-    // [...textDiv.children].forEach((div) => {
-    //   console.log(div);
-    //   if (div.children.length === 1 && div.querySelector('picture')) {
-    //     div.className = 'cards-card-image';
-    //   } else {
-    //     div.className = 'cards-card-body';
-    //   }
-    // });
-    // siteInnerDiv.append(textDiv);
+    siteHeadDiv.style.backgroundImage = 'url(' + textDiv.children[2].querySelector('picture > img').src + ')';
   });
   block.textContent = '';
   siteInnerDiv.append(siteHeadLinklistFun());
   siteInnerDiv.append(siteHeadFixbarFun());
   siteInnerDiv.append(headerContainerFun(title, location));
   siteHeadDiv.append(siteInnerDiv);
-  siteHeadDiv.append(backGroudPic);
-  // siteHeadDiv.querySelectorAll('img')
-  //   .forEach((img) => img.closest('picture')
-  //     .replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.append(siteHeadDiv);
+}
+
+export async function loadSiteHeader(block) {
+  const siteHeader = block.querySelector('siteheader');
+  block.replaceChild(decorate(siteHeader), siteHeader);
 }
