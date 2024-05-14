@@ -17,6 +17,7 @@ export default function decorate(block) {
       const li = buildElementWithClassName('li', 'siteNav_link');
       const a = buildElementWithClassName('a', 'menuDisplaySwitch');
       a.append(item.textContent);
+      a.href=item.href;
       li.append(a);
       ul.append(li);
     });

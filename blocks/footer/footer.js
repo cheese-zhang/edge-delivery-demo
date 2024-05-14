@@ -33,7 +33,6 @@ export default async function decorate(block) {
   // while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
   const logos = [volvofinance, mackfinance];
   [...logos].forEach((logo, index) => {
-    console.log(fragment.querySelectorAll('picture')[index]);
     logo.style.backgroundImage = `url(${fragment.querySelectorAll('picture')[index].querySelector('img').src})`;
     footer_logos.append(logo);
   });
