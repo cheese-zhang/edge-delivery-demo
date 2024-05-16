@@ -24,8 +24,8 @@ export default function decorate(block) {
       textDiv.append(row.firstElementChild);
     }
     [...textDiv.querySelectorAll('a')].forEach((item) => {
-      swiperSlide.append(MyappTemplate(item.textContent,item.href));
-      swiperSlideNext.append(MyappTemplate(item.textContent,item.href));
+      swiperSlide.append(MyappTemplate(item.textContent, item.href));
+      swiperSlideNext.append(MyappTemplate(item.textContent, item.href));
     });
   });
   swiperWrapper.append(swiperSlide);
@@ -34,6 +34,7 @@ export default function decorate(block) {
   block.append(swiperContainer);
   block.append(buildElementWithClassName('div', 'myApps_paginationcontainer'));
 
+  // eslint-disable-next-line no-undef
   const swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     centeredSlides: true,
