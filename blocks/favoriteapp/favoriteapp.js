@@ -34,7 +34,7 @@ export default function decorate(block) {
   block.append(swiperContainer);
   block.append(buildElementWithClassName('div', 'myApps_paginationcontainer'));
   // eslint-disable-next-line no-undef
-  const swiper = new Swiper('.swiper-container', {
+  const swiper1 = new Swiper('.swiper-container', {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -43,10 +43,6 @@ export default function decorate(block) {
     },
     pagination: {
       el: '.myApps_paginationcontainer',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '"></span>';
-      },
     },
   });
 }
