@@ -34,15 +34,5 @@ export default function decorate(block) {
   block.append(swiperContainer);
   block.append(buildElementWithClassName('div', 'myApps_paginationcontainer'));
   // eslint-disable-next-line no-undef
-  const swiper1 = new Swiper('.swiper-container', {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.myApps_paginationcontainer',
-    },
-  });
+
 }

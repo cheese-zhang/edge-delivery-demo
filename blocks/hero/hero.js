@@ -28,19 +28,5 @@ export default function decorate(block) {
   block.append(swiperContainer);
   block.append(buildElementWithClassName('div','hero-pagination'));
 
-  const swiper2 = new Swiper('.swiper-container', {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".hero-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '"></span>';
-      },
-    },
-  });
+
 }
