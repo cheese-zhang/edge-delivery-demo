@@ -1,14 +1,12 @@
 {
   "project": "Volvo Trucks",
-  "host": "main--edge-delivery-demo--zhangqx1994.hlx.page",
   "plugins": [
 
     {
       "id": "library",
       "title": "Library",
       "environments": [ "edit" ],
-      "url": "/tools/sidekick/library.html",
-      "includePaths": [ "**.docx**" ]
+      "url": "/tools/sidekick/library.html"
     }
   ]
 }
