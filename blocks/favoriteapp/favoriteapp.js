@@ -33,7 +33,6 @@ export default function decorate(block) {
   swiperContainer.append(swiperWrapper);
   block.append(swiperContainer);
   block.append(buildElementWithClassName('div', 'myApps_paginationcontainer'));
-
   // eslint-disable-next-line no-undef
   const swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
