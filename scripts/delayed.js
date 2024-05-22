@@ -4,7 +4,6 @@ import { sampleRUM } from './aem.js';
 // Core Web Vitals RUM collection
 sampleRUM('cwv');
 
-import './swiper-bundle.js';
 const swiperMyapps = new Swiper('.swiper-container', {
   spaceBetween: 30,
   centeredSlides: true,
