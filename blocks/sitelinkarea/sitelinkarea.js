@@ -27,7 +27,7 @@ export default function decorate(block) {
     else if (element.textContent.indexOf('BRAND') > -1) {
       console.log("BRAND");
     }
-  })
+  });
   siteLinkArea_newslinks.append(ul);
   //pressinfo
   const siteLinkArea_pressinfo = buildElementWithClassName('compose', 'siteLinkArea_pressinfo');
