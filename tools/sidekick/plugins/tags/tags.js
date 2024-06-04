@@ -11,7 +11,7 @@
  */
 
 // eslint-disable-next-line import/no-unresolved
-import { PLUGIN_EVENTS } from 'https://main--edge-delivery-demo--zhangqx1994.hlx.page/tools/sidekick/library/events/events.js';
+import { PLUGIN_EVENTS } from '/tools/sidekick/library/events/events.js';
 
 const selectedTags = [];
 
