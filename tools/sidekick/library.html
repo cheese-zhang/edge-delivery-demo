@@ -36,9 +36,13 @@
       const library = document.createElement('sidekick-library')
       library.config = {
         base: '/tools/sidekick/library.json',
-        tags: '/tools/sidekick/plugins/tags/tags.js',
-        'api-test': '/tools/sidekick/plugins/api-test/api-test.js',
         plugins: {
+          tags:{
+            src:'/tools/sidekick/plugins/tags/tags.js'
+          },
+          'api-test':{
+            src: '/tools/sidekick/plugins/api-test/api-test.js'
+          },
           blocks: {
             viewPorts: [
               {
