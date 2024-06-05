@@ -1,4 +1,5 @@
-import { PLUGIN_EVENTS } from 'https://main--edge-delivery-demo--zhangqx1994.hlx.page/tools/sidekick/library/events/events.js';
+// eslint-disable-next-line import/no-unresolved
+import { PLUGIN_EVENTS } from '../../library/events/events.js';
 
 export async function decorate(container, data, query) {
   const group = document.createElement('sp-button-group');
@@ -10,7 +11,7 @@ export async function decorate(container, data, query) {
   group.append(positiveToastButton);
 
   positiveToastButton.addEventListener('click', () => {
-    container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.TOAST,  { detail: { message: 'Toast Shown!' } }))
+    container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.TOAST, { detail: { message: 'Toast Shown!' } }));
   });
 
   const negativeToastButton = document.createElement('sp-button');
@@ -19,7 +20,12 @@ export async function decorate(container, data, query) {
   group.append(negativeToastButton);
 
   negativeToastButton.addEventListener('click', () => {
-    container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.TOAST,  { detail: { message: 'Toast Shown!', variant: 'negative' } }))
+    container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.TOAST, {
+      detail: {
+        message: 'Toast Shown!',
+        variant: 'negative',
+      },
+    }));
   });
 
   const showLoaderButton = document.createElement('sp-button');
@@ -29,10 +35,10 @@ export async function decorate(container, data, query) {
 
   showLoaderButton.addEventListener('click', () => {
     group.style.display = 'none';
-    container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.SHOW_LOADER))
+    container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.SHOW_LOADER));
     setTimeout(() => {
       group.style.display = 'inline-flex';
-      container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.HIDE_LOADER))
+      container.dispatchEvent(new CustomEvent(PLUGIN_EVENTS.HIDE_LOADER));
     }, 2000);
   });
 
