@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import { PLUGIN_EVENTS } from '/tools/sidekick/library/events/events.js';
+import { PLUGIN_EVENTS } from '../../library/events/events.js';
 
 export async function decorate(container, data, query) {
   const group = document.createElement('sp-button-group');
